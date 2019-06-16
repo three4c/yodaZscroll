@@ -1,0 +1,70 @@
+@import url(../../node_modules/reset-css/reset.css);
+body {
+  font-family: 'yu-mincho-5go-kana', sans-serif;
+}
+
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1px;
+}
+
+.container__inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+}
+
+.container__inner .section__contents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__inner .section__contents:nth-child(1) {
+  z-index: 5;
+}
+
+.container__inner .section__contents:nth-child(2) {
+  opacity: 0.3;
+  z-index: 4;
+}
+
+.container__inner .section__contents:nth-child(3) {
+  opacity: 0.3;
+  z-index: 3;
+}
+
+.container__inner .section__contents:nth-child(4) {
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.container__inner .section__contents:nth-child(5) {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container__inner .section__contents:nth-child(6) {
+  opacity: 0;
+  z-index: 1;
+}
+
+.container__inner .section__text {
+  font-size: 640px;
+  font-weight: 700;
+}
+
+.container__inner .section__img {
+  border-radius: 50%;
+}
+
+.scroll {
+  visibility: hidden;
+  z-index: -1;
+}
